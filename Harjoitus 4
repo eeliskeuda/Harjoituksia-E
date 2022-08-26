@@ -1,0 +1,30 @@
+using System;
+
+namespace Harjoitus_E4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Syötä kaksi kokonaislukua, niin kerron onko ne positiivisia vai negatiivisia.");
+            int luku1 = int.Parse(Console.ReadLine());
+            int luku2 = int.Parse(Console.ReadLine());
+            if (luku1 == 0 || luku2 == 0)
+            {
+                Console.WriteLine("Virheellinen syöte, nolla ei ole kumpikaan.");
+            }
+            else if (luku1 > 0 && luku2 > 0)
+            {
+                Console.WriteLine("Molemmat ovat positiivisia.");
+            }
+            else if (luku1 < 0 && luku2 < 0)
+            {
+                Console.WriteLine("Molemmat ovat negatiivisia.");
+            }
+            else
+            {
+                Console.WriteLine("Toinen on positiivinen ja toinen negatiivinen.");
+            }
+        }
+    }
+}
