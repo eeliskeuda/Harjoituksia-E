@@ -1,0 +1,16 @@
+using System;
+
+namespace Harjoitus_E7
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("3:lla jaolliset luvut välillä 1-99:");
+            for(int i = 3; i <= 99; i += 3)
+            {
+                Console.WriteLine(i);
+            }
+        }
+    }
+}
