@@ -1,0 +1,19 @@
+using System;
+
+namespace Harjoitus_E3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Syötä sana, niin vaihdan ensimmäisen ja viimeisen kirjaimen keskenään: ");
+            string sana = Console.ReadLine();
+            Console.Write(sana[sana.Length - 1]);       // Tulostetaan viimeinen kirjain ensin
+            for (int i = 1; i < sana.Length - 1; i++)   // Tulostetaan välissä olevat kirjaimet
+            {
+                Console.Write(sana[i]);
+            }
+            Console.Write(sana[0]);     // Tulostetaan ensimmäinen kirjain viimeiseksi
+        }
+    }
+}
