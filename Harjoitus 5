@@ -1,0 +1,23 @@
+using System;
+
+namespace Harjoitus_E5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Syötä lause, niin kerron sen pisimmän sanan.");
+            string lause = Console.ReadLine();                  // Tallennetaan lause
+            string[] lauseenSanat = lause.Split(" ");           // Erotellaan lauseen sanat taulukkoon
+            string pisinSana = lauseenSanat[0];                 // Tallennetaan lauseen ensimmäinen sana verrattavaksi
+            for (int i = 1; i < lauseenSanat.Length; i++)
+            {
+                if (lauseenSanat[i].Length > pisinSana.Length)  // Verrataan ensimmäisen sanan pituutta muiden sanojen pituuksiin
+                {
+                    pisinSana = lauseenSanat[i];                // Jos sana on suurempi se tallennetaan
+                }
+            }
+            Console.WriteLine("Pisin sana on: {0}", pisinSana);     // Tulostetaan suurin sana
+        }
+    }
+}
